@@ -1,3 +1,5 @@
+import sys
+
 class Tape():
 
 	def __init__(self, cells):
@@ -39,15 +41,21 @@ class TuringMachine():
 		self.transitions = transitions
 
 	def transition(self):
-		input = (self.current_state, self.tape.read())
+		try:
+			input = (self.current_state, self.tape.read())
 
-		output = self.transitions[input]
+			output = self.transitions[input]
+		
+			self.current_state = output[0]
 
-		self.current_state = output[0]
+			self.tape.write(output[1])
 
-		self.tape.write(output[1])
+			self.tape.move(output[2])
 
-		self.tape.move(output[2])
+		except Exception as e:
+			print ("Simulation failed. Machine broke down. \nMake sure the tape input is in " +
+				"correct format and the machine's description is legal.")	
+			sys.exit(1)
 
 	def simulate(self):
 		self.current_state = self.start_state

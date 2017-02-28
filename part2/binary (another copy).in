@@ -1,0 +1,158 @@
+states 23
+qinit
+qw0m
+qw0w
+qw1m
+qww
+qw1w
+qw1w1m
+qww1m
+qww0m
+qww1w
+qww0w
+qw0w0m
+qw0w1m
+qw1w1w
+qw0w0w
+qw0w1w
+qwww
+qw0w1w-
+qw0w1w+
+qwww+
+qback
+qa +
+qr -
+alphabet 3 0 1 #
+qinit - qr - R
+qinit + qr + R
+qinit 0 qw0m _ R 
+qinit 1 qw1m _ R
+qinit # qww # R
+qinit _ qr _ R
+qw0m - qr - R
+qw0m + qr + R
+qw0m 0 qw0m 0 R
+qw0m 1 qw0m 1 R
+qw0m # qw0w # R
+qw0m _ qr _ R
+qw0w - qw0w - R
+qw0w + qw0w + R
+qw0w 0 qw0w0m - R
+qw0w 1 qw0w1m - R
+qw0w # qww0w # R
+qw0w _ qr _ R
+qw1m - qr - R
+qw1m + qr + R
+qw1m 0 qw1m 0 R
+qw1m 1 qw1m 1 R
+qw1m # qw1w # R
+qw1m _ qr _ R
+qww - qww - R
+qww + qr + R
+qww 0 qww0m - R
+qww 1 qww1m - R 
+qww # qwww # R
+qww _ qr _ R
+qw1w - qw1w - R
+qw1w + qr + R
+qw1w 0 qw0w1m - R 
+qw1w 1 qw1w1m - R
+qw1w # qww1w # R
+qw1w _ qr _ R
+qw1w1m - qw1w1m - R
+qw1w1m + qr + R
+qw1w1m 0 qw1w1m 0 R
+qw1w1m 1 qw1w1m 1 R
+qw1w1m # qw1w1w # R
+qw1w1m _ qr _ R
+qww1m _ qr _ R
+qww1m - qww1m - R
+qww1m + qr + R
+qww1m 0 qww1m 0 R
+qww1m 1 qww1m 1 R
+qww1m # qww1w # R
+qww1m _ qr _ R
+qww0m - qww0m - R
+qww0m + qr + R
+qww0m 0 qww0m 0 R
+qww0m 1 qww0m 1 R
+qww0m # qww0w # R
+qww0m _ qr _ R
+qww1w - qww1w - R
+qww1w + qw0w1w+ - R
+qww1w 0 qr 0 R
+qww1w 1 qback - L
+qww1w # qr # R
+qww1w _ qr _ R
+qww0w - qww0w - R
+qww0w + qwww+ + R
+qww0w 0 qback - L
+qww0w 1 qr 1 R
+qww0w # qr # R
+qww0w _ qr _ R
+qw0w0m - qw0w0m - R
+qw0w0m + qr + R
+qw0w0m 0 qw0w0m 0 R
+qw0w0m 1 qw0w0m 1 R
+qw0w0m # qw0w0w # R
+qw0w0m _ qr _ R
+qw0w1m - qw0w1m - R
+qw0w1m + qr + R
+qw0w1m 0 qw0w1m 0 R
+qw0w1m 1 qw0w1m 1 R
+qw0w1m # qw0w1w # R
+qw0w1m _ qr _ R
+qw1w1w - qw1w1w - R
+qw1w1w + qwww+ + R
+qw1w1w 0 qback + R
+qw1w1w 1 qr 1 R
+qw1w1w # qr # R
+qw1w1w _ qr _ R
+qw0w0w - qw0w0w - R
+qw0w0w + qwww+ - R
+qw0w0w 0 qback - L
+qw0w0w 1 qr 1 R
+qw0w0w # qr # R
+qw0w0w _ qr _ R
+qw0w1w - qw0w1w- - R
+qw0w1w + qw0w1w+ - R
+qw0w1w 0 qr 0 R
+qw0w1w 1 qback - L 
+qw0w1w # qr # R
+qw0w1w _ qr _ R
+qwww - qwww - R
+qwww + qwww+ - R
+qwww 0 qr 0 R
+qwww 1 qr 1 R
+qwww # qr # R
+qwww _ qa _ R
+qw0w1w- - qw0w1w - R
+qw0w1w- +
+qw0w1w- 0 qr 0 R
+qw0w1w- 1 qback - L
+qw0w1w- # qr # R
+qw0w1w- _ qr _ R
+qw0w1w+ - qw0w1w+ - R
+qw0w1w+ 0 qback + R
+qw0w1w+ 1 qr 1 R
+qw0w1w+ # qr # R
+qw0w1w+ _ qr _ R
+qwww+ - qwww+ - R
+qwww+ 0 qr 0 R
+qwww+ 1 qa - R
+qwww+ # qr # R
+qwww+ _ qr _ R
+qback - qback - L
+qback + qback + L
+qback 0 qback 0 L
+qback 1 qback 1 L
+qback # qback # L
+qback _ qinit _ R
+
+
+
+
+
+
+
+

@@ -3,7 +3,6 @@ import sys
 from machine import TuringMachine
 from machine import Tape
 
-
 def read_machine(file_path):
 	try:
 		with open(file_path) as file:
@@ -44,7 +43,12 @@ def read_machine(file_path):
 			line = file.readline().split()
 
 			while line != []:
-				transitions[(line[0], line[1])] = (line[2], line[3], line[4])
+				if line[0] in states:
+					transitions[(line[0], line[1])] = (line[2], line[3], line[4])
+				else:
+					print (line[0], states)
+					raise ValueError("Error in transision table: transitions are only possible from specified states.")
+					sys.exit(1)
 
 				line = file.readline().split()	
 

@@ -1,0 +1,70 @@
+states 13
+qs
+qs0
+qs1
+qs2
+qswap0
+qswap1
+qi
+qi0
+qi1
+qi2
+qm
+qa +
+qr -
+alphabet 3 0 1 2 #
+qs 0 qs0 0 R
+qs 1 qs1 1 R
+qs 2 qs2 2 R
+qs # qs # R
+qs _ qr _ R
+qs0 0 qs0 0 R
+qs0 1 qs1 1 R
+qs0 2 qs2 2 R
+qs0 # qa # R
+qs0 _ qr _ R
+qs1 0 qswap0 1 L
+qs1 1 qs1 1 R
+qs1 2 qs2 2 R
+qs1 # qa # R
+qs1 _ qr _ R
+qs2 0 qswap0 2 L
+qs2 1 qswap1 2 L
+qs2 2 qs2 2 R
+qs2 # qa # R
+qs2 _ qr _ R
+qswap0 0 qr 0 R
+qswap0 1 qi 0 R
+qswap0 2 qr 2 R
+qswap0 # qr # R
+qswap0 _ qr _ R
+qswap1 0 qr 0 R
+qswap1 1 qr 0 R
+qswap1 2 qi 1 R
+qswap1 # qr # R
+qswap1 _ qr _ R
+qi 0 qi0 0 R
+qi 1 qi1 1 R
+qi 2 qi2 2 R
+qi # qr # R
+qi _ qr _ R
+qi0 0 qi2 0 R
+qi0 1 qi1 1 R
+qi0 2 qi2 2 R
+qi0 # qm # L
+qs0 _ qr _ R
+qi1 0 qswap0 1 L
+qi1 1 qi1 1 R
+qi1 2 qi2 2 R
+qi1 # qm # L
+qi1 _ qr _ R
+qi2 0 qswap0 2 L
+qi2 1 qswap1 2 L
+qi2 2 qi2 2 R
+qi2 # qm # L
+qi2 _ qr _ R
+qm 0 qm 0 L
+qm 1 qm 1 L
+qm 2 qm 2 L
+qm # qs # R
+qs0 _ qr _ R

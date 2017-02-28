@@ -10,7 +10,7 @@ class Tape():
 		self.cells[self.head] = symbol
 
 	def read(self):
-		if self.head == len(self.cells):
+		if (self.head + 1) == len(self.cells):
 			self.cells.append("_")
 
 
@@ -39,12 +39,14 @@ class TuringMachine():
 		self.accept_state = accept_state
 		self.reject_state = reject_state
 		self.transitions = transitions
+		self.debug_on = False
 
 	def transition(self):
+		
 		try:
-			input = (self.current_state, self.tape.read())
+			machine_input = (self.current_state, self.tape.read())
 
-			output = self.transitions[input]
+			output = self.transitions[machine_input]
 		
 			self.current_state = output[0]
 
@@ -52,10 +54,21 @@ class TuringMachine():
 
 			self.tape.move(output[2])
 
+
 		except Exception as e:
+			print (machine_input)
+
 			print ("Simulation failed. Machine broke down. \nMake sure the tape input is in " +
 				"correct format and the machine's description is legal.")	
 			sys.exit(1)
+
+		if (self.debug_on):
+			print (machine_input)
+
+			tape = list(self.tape.cells)
+			tape[self.tape.head] = "[" + self.tape.cells[self.tape.head] + "]"
+			print ("".join(tape))
+			input()
 
 	def simulate(self):
 		self.current_state = self.start_state

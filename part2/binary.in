@@ -1,0 +1,116 @@
+states 18
+qinit
+qw
+qwm
+qww
+qw1m
+qw1w
+qw1w1m
+qww1w
+qwwm
+qww1m
+qw1w1w
+qww1w
+qwww
+qww1w+
+qwww+
+qback
+qa +
+qr -
+alphabet 5 0 1 # - +
+qinit - qr - R
+qinit + qr + R
+qinit 0 qwm _ R 
+qinit 1 qw1m _ R
+qinit # qr # R
+qw _ qr _ R
+qw - qr - R
+qw + qr + R
+qw 0 qwm _ R 
+qw 1 qw1m _ R
+qw # qww # R
+qw _ qr _ R
+qwm - qr - R
+qwm + qr + R
+qwm 0 qwm 0 R
+qwm 1 qwm 1 R
+qwm # qww # R
+qwm _ qr _ R
+qww - qww - R
+qww + qww + R
+qww 0 qwwm - R
+qww 1 qww1m - R
+qww # qwww # R
+qww _ qr _ R
+qw1m - qr - R
+qw1m + qr + R
+qw1m 0 qw1m 0 R
+qw1m 1 qw1m 1 R
+qw1m # qw1w # R
+qw1m _ qr _ R
+qw1w - qw1w - R
+qw1w + qr + R
+qw1w 0 qww1m - R 
+qw1w 1 qw1w1m - R
+qw1w # qww1w # R
+qw1w _ qr _ R
+qw1w1m - qw1w1m - R
+qw1w1m + qr + R
+qw1w1m 0 qw1w1m 0 R
+qw1w1m 1 qw1w1m 1 R
+qw1w1m # qw1w1w # R
+qw1w1m _ qr _ R
+qww1w - qww1w - R
+qww1w + qww1w+ - R
+qww1w 0 qr 0 R
+qww1w 1 qback - L
+qww1w # qr # R
+qww1w _ qr _ R
+qwwm - qwwm - R
+qwwm + qr + R
+qwwm 0 qwwm 0 R
+qwwm 1 qwwm 1 R
+qwwm # qwww # R
+qwwm _ qr _ R
+qww1m - qww1m - R
+qww1m + qr + R
+qww1m 0 qww1m 0 R
+qww1m 1 qww1m 1 R
+qww1m # qww1w # R
+qww1m _ qr _ R
+qw1w1w - qw1w1w - R
+qw1w1w + qwww+ + R
+qw1w1w 0 qback + R
+qw1w1w 1 qr 1 R
+qw1w1w # qr # R
+qw1w1w _ qr _ R
+qww1w - qww1w - R
+qww1w + qww1w+ - R
+qww1w 0 qr 0 R
+qww1w 1 qback - L 
+qww1w # qr # R
+qww1w _ qr _ R
+qwww - qwww - R
+qwww + qwww+ - R
+qwww 0 qback - L
+qwww 1 qr 1 R
+qwww # qr # R
+qwww _ qa _ R
+qww1w+ - qww1w+ - R
+qww1w+ + qr + R
+qww1w+ 0 qback + R
+qww1w+ 1 qr 1 R
+qww1w+ # qr # R
+qww1w+ _ qr _ R
+qwww+ - qwww+ - R
+qwww+ + qr + R
+qwww+ 0 qr 0 R
+qwww+ 1 qback - L
+qwww+ # qr # R
+qwww+ _ qr _ R
+qback - qback - L
+qback + qback + L
+qback 0 qback 0 L
+qback 1 qback 1 L
+qback # qback # L
+qback _ qw _ R

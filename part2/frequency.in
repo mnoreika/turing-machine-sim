@@ -1,0 +1,34 @@
+states 8
+qi
+qcb
+qca
+qwa
+qwb
+qback
+qa +
+qr -
+alphabet 3 a b #
+qi a qcb _ R
+qi b qca _ R
+qi # qwa # R
+qi _ qi _ R
+qcb a qcb a R
+qcb b qback _ L
+qcb # qwa # R
+qcb _ qcb _ R
+qca a qback _ R
+qca b qca b R
+qca # qwb # R
+qca _ qca _ R
+qwa a qr a L
+qwa b qr b L
+qwa # qr # L 
+qwa _ qa a L
+qwb a qr a L
+qwb b qr b L
+qwb # qr # L
+qwb _ qa b L
+qback a qback a L
+qback b qback b L
+qback # qback # L
+qback _ qi _ L

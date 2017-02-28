@@ -1,0 +1,55 @@
+states 13
+qi
+qfa
+qfb
+qfc
+qcbc
+qcac
+qcab
+qwa
+qwb
+qwc
+qback
+qa +
+qr -
+alphabet 3 a b #
+qi a qcbc - R
+qi b qcac - R
+qi c qcab - R
+qi # qwa # R
+qi _ qi _ R
+qfa a qfa a R
+qfa b qcac _ R
+qfa c qcab _ R
+qfa # qwa # R
+qfa _ qfa _ R
+qfb a qcbc _ R
+qfb b qfb b R
+qfb c qcab _ R
+qfb # qwb # R
+qfb _ qfb _ R
+qfc a qcbc _ R
+qfc b qcac _ R
+qfc c qfc c R
+qfc # qwc # R
+qfc _ qfc _ R
+qcbc a qcbc a R
+qcbc b qcbc _ R
+qcbc c qcbc _ R
+qcbc # qback # L
+qcac a qcac _ R
+qcac b qcac b R
+qcac c qcac _ R
+qcac # qback # L
+qcab a qcab _ R
+qcab b qcab _ R
+qcab c qcab c R
+qcab # qback # L
+qwa _ qa a R
+qwb _ qa b R
+qwc _ qa c R
+qback a qback a L
+qback b qback b L
+qback c qback c L
+qback # qr # L
+qback _ qi _ R
